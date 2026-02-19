@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.static(join(__dirname,"Public")));
 connectDB();
-app.use("/",router);
+app.use("/api",router);
 
 app.use("/",(req,res)=>{
     res.sendFile(join(__dirname,"Public","/home.html"));
