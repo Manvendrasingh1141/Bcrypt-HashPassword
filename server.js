@@ -17,7 +17,7 @@ connectDB();
 app.use("/api",router);
 
 app.use("/",(req,res)=>{
-    res.sendFile(join(__dirname,"Public","/home.html"));
+    res.sendFile(join(__dirname,"Public","home.html"));
 })
 
 app.use('/login',(req,res)=>{
