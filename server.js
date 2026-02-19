@@ -15,6 +15,11 @@ app.use(express.json());
 app.use(express.static(join(__dirname,"Public")));
 connectDB();
 app.use("/",router);
+
+app.use("/",(req,res)=>{
+    res.sendFile(join(__dirname,"Public","/home.html"));
+})
+
 app.use('/login',(req,res)=>{
     res.sendFile(join(__dirname,"Public","/login.html"));
 })
